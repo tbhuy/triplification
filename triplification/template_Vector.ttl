@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tom: <http://melodi.irit.fr/ontologies/tom.owl#>.
+@prefix mrs: <http://melodi.irit.fr/resource#>.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov-o: <http://www.w3.org/TR/prov-o/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix eom: <http://melodi.irit.fr/ontologies/eom.owl#>.
+@prefix dcat: <https://www.w3.org/TR/vocab-dcat-2/>.
+@prefix eoam: <http://melodi.irit.fr/ontologies/eoam.owl#>.
+@prefix dct: <http://purl.org/dc/terms/> .
+# **************************************Feature Part*******************************************
+dummy a tom:GeoFeature.
+dummy tom:hasType valueToInstance($.type, GeoFeatureType).
+dummy tom:id valueToLiteral($.id, string).
+dummy geo:hasGeometry dummy_Geometry.
+dummy_Geometry geo:asWKT valueToLiteral($.wkt, wktLiteral).

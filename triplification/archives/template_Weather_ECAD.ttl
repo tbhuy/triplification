@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix wom: <http://melodi.irit.fr/ontologies/wom.owl#> .
+@prefix qudt-1-1: <http://qudt.org/1.1/schema/qudt#> .
+@prefix qudt-unit-1-1: <http://qudt.org/1.1/vocab/unit#> .
+@prefix cdt:<http://w3id.org/lindt/custom_datatypes#>.
+dummy a wom:WeatherObservation.
+dummy sosa:resultTime valueToLiteral($.date, dateTime).
+dummy sosa:hasSimpleResult valueToLiteral($.rs, float).
+dummy sosa:observedProperty valueToInstance($.prop, ObservableProperty).
+dummy sosa:madeBySensor valueToInstance($.sensor, Sensor).

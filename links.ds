@@ -1,0 +1,42 @@
+
+{'admin':{'fn': 'admin.tar.xz',
+               'link': 'https://static.data.gouv.fr/resources/geozones/20190513-134438/geozones-france-2019-0-json.tar.xz',
+               'format': 'json'
+               }
+  ,
+
+'cesbio2018': {'fn': 'admin.tar.xz',
+                    'link': 'https://static.data.gouv.fr/resources/geozones/20190513-134438/geozones-france-2019-0-json.tar.xz'
+                    },
+
+'clc2018': {'fn': 'admin.tar.xz',
+                 'link': 'https://static.data.gouv.fr/resources/geozones/20190513-134438/geozones-france-2019-0-json.tar.xz'
+
+                 },
+
+'bulletin': {'fn': 'bulletin.json',
+                  'link': 'http://melodi.irit.fr/data/bulletin.json'
+                  },
+
+'tile_France': {'fn': 'tile_France.shp',
+                     'link': 'http://melodi.irit.fr/data/tile_France.json'
+                     },
+
+'tile_world': {'fn': 'tile_world.kml',
+                    'link': ' https://sentinel.esa.int/documents/247904/1955685/S2A_OPER_GIP_TILPAR_MPC__20151209T095117_V20150622T000000_21000101T000000_B00.kml'
+                    },
+
+'station': {'fn': 'station.json',
+                 'link': 'https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/postesSynop.json'
+                 },
+
+'natura': {'fn': 'natura.zip',
+                'link': 'http://ftp.eea.europa.eu/www/natura2000/Natura2000_end2018_Shapefile.zip',
+                },
+                
+'cadastre47':{'fn': 'cadastre47.zip',
+                'link': 'https://cadastre.data.gouv.fr/data/etalab-cadastre/2019-07-01/shp/departements/47/cadastre-47-parcelles-shp.zip',
+             }
+
+             
+ }

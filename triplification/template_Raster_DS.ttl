@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tom: <http://melodi.irit.fr/ontologies/tom.owl#>.
+@prefix mrs: <http://melodi.irit.fr/resource#>.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov-o: <http://www.w3.org/TR/prov-o/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix eom: <http://melodi.irit.fr/ontologies/eom.owl#>.
+@prefix dcat: <https://www.w3.org/TR/vocab-dcat-2/>.
+@prefix eoam: <http://melodi.irit.fr/ontologies/eoam.owl#>.
+@prefix dct: <http://purl.org/dc/terms/> .
+# **************************************eoam prov-o Part*******************************************
+dummy a eoam:EOAnalysis .
+dummy prov-o:used valueToInstance($.productID1, Product).
+dummy prov-o:used valueToInstance($.productID2, Product).
+dummy prov-o:generated dummy_Dataset.
+dummy prov-o:wasAssociatedWith valueToInstance($.agent, Agent).
+dummy_Dataset dct:creator valueToInstance($.agent, Agent).
+dummy_Dataset a dcat:Dataset.
+# **************************************eoam dcat Part*******************************************
+dummy_RasterFile a dcat:Distribution.
+dummy_RasterFile a eoam:RasterFile.
+dummy_Dataset dct:temporal dummy_PeriodOfTime.
+dummy_PeriodOfTime a dcat:PeriodOfTime.
+dummy_PeriodOfTime time:hasBeginning valueToInstant($.bg).
+dummy_PeriodOfTime time:hasEnd valueToInstant($.end).
+dummy_Dataset dct:spatial dummy_Location.
+dummy_Location a dct:Location.
+dummy_Location dcat:bbox valueToLiteral($.bbox, wktLiteral).
+dummy_Dataset dcat:distribution dummy_RasterFile.
+dummy_RasterFile dcat:spatialResolutionInMeters valueToLiteral($.resolution, decimal).
+dummy_RasterFile dct:conformsTo valueToURI ($.crs, http://www.opengis.net/def/crs/EPSG/0/ -).
+dummy_RasterFile dcat:byteSize valueToLiteral($.size, decimal).
+dummy_RasterFile dct:issued valueToLiteral($.creationdate, dateTime).
+dummy_RasterFile dct:format valueToLiteral($.format, string).
+dummy_RasterFile dct:title valueToLiteral($.title, string).
+dummy_RasterFile dct:description valueToLiteral($.description, string).
+dummy_RasterFile eoam:quicklook valueToLiteral($.quicklook, string).

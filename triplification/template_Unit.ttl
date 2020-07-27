@@ -1,0 +1,9 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix tu: <http://melodi.irit.fr/ontologies/tu.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+dummy a valueToClass($.type).
+dummy tu:id valueToLiteral($.id, string).
+dummy geo:hasGeometry dummy_Geometry.
+dummy_Geometry geo:asWKT valueToLiteral($.wkt, wktLiteral).
+

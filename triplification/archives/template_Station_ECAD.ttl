@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix wom: <http://melodi.irit.fr/ontologies/wom.owl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+# *********************************************************************************
+# First we declare an observation, an instance of the class mfo:Observation
+# *********************************************************************************
+dummy a wom:Station.
+## attributes
+dummy wom:id valueToLiteral($.id, string).
+dummy wom:name valueToLiteral($.name, string).
+dummy wom:altitude valueToLiteral($.alt, integer).
+dummy wom:country valueToLiteral($.cn, string).
+## now the geometry
+dummy geo:hasGeometry dummy_Geometry.
+dummy_Geometry geo:asWKT valueToLiteral($.wkt, wktLiteral).

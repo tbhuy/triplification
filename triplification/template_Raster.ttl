@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tom: <http://melodi.irit.fr/ontologies/tom.owl#>.
+@prefix mrs: <http://melodi.irit.fr/resource#>.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov-o: <http://www.w3.org/TR/prov-o/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix eom: <http://melodi.irit.fr/ontologies/eom.owl#>.
+@prefix dcat: <https://www.w3.org/TR/vocab-dcat-2/>.
+@prefix eoam: <http://melodi.irit.fr/ontologies/eoam.owl#>.
+@prefix dct: <http://purl.org/dc/terms/> .
+# *********************************************************************************
+dummy a tom:GFObservationCollection.
+dummy a dcat:Dataset.
+dummy a prov-o:Entity.
+dummy tom:observedPropertyType valueToInstance($.type, GFObservedPropertyType).
+dummy prov-o:wasDerivedFrom valueToInstance($.raster, RasterFile).
+dummy prov-o:wasDerivedFrom valueToInstance($.vector, GFFile).
+dummy sosa:hasFeatureOfInterest valueToInstance($.foi, GeoFeature).
+dummy sosa:phenomenonTime valueToInterval($.interval) .

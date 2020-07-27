@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tom: <http://melodi.irit.fr/ontologies/tom.owl#>.
+@prefix mrs: <http://melodi.irit.fr/resource#>.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix cd: <http://melodi.irit.fr/ontologies/cd.owl#>.
+@prefix prov-o: <http://www.w3.org/TR/prov-o/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+# *********************************************************************************
+dummy a tom:GeoFeatureObservation .
+dummy sosa:observedProperty valueToURI($.type, http://melodi.irit.fr/resource/ -).
+dummy prov-o:used dummy_Raster.
+dummy_Raster prov-o:wasGeneratedBy dummy_EOProcessing.
+dummy_EOProcessing prov-o:used valueToURI($.productID1, http://melodi.irit.fr/resource/ -).
+dummy_EOProcessing prov-o:used valueToURI($.productID2, http://melodi.irit.fr/resource/ -).
+dummy sosa:hasTime valueToInterval($.interval) .
+dummy sosa:hasFeatureOfInterest valueToURI($.foi, http://melodi.irit.fr/resource/ -).
